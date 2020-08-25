@@ -4,7 +4,7 @@ USER $NB_UID
 
 # more R packages  
 RUN conda install --quiet --yes \
-    'r-rstudio' \
+    'r rstudio' \
     && \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
