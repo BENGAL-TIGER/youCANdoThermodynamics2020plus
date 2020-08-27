@@ -16,7 +16,8 @@ USER $NB_UID
 #  && conda clean --all -f -y    \
 #  && fix-permissions "/home/${NB_USER}"
 
-RUN pip install jupyter-rsession-proxy nbgitpuller
+# RUN pip install jupyter-rsession-proxy nbgitpuller
+RUN pip install nbgitpuller
 #  && pip install --no-cache notebook  \
 # pip install nbgitpuller
 
