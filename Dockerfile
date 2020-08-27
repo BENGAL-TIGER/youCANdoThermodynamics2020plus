@@ -10,7 +10,7 @@ USER $NB_UID
 #     fix-permissions "/home/${NB_USER}"
 
 
-RUN conda install -c r rstudio \
+RUN conda install -c r r-rstudio \
  && conda clean --all -f -y    \
  && fix-permissions "/home/${NB_USER}"
 
