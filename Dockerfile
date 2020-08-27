@@ -10,8 +10,10 @@ USER $NB_UID
 #     fix-permissions "/home/${NB_USER}"
 
 
-RUN conda install rstudio \
+RUN conda install -c r rstudio \
  && pip install jupyter-rsession-proxy \
  && pip install --no-cache notebook
+ && conda clean --all -f -y  \
+ && fix-permissions "/home/${NB_USER}"
 
 # RUN pip install --no-cache notebook
