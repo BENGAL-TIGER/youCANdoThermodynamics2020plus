@@ -9,4 +9,9 @@ USER $NB_UID
 #     fix-permissions "${CONDA_DIR}" && \
 #     fix-permissions "/home/${NB_USER}"
 
-RUN pip install --no-cache notebook
+
+RUN conda install rstudio \
+ && pip install jupyter-rsession-proxy \
+ && pip install --no-cache notebook
+
+# RUN pip install --no-cache notebook
