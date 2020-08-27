@@ -10,8 +10,8 @@ USER $NB_UID
 #     fix-permissions "/home/${NB_USER}"
 
 
-RUN conda install -c r rstudio          \
- && conda clean --all -f -y             \
+RUN conda create -n studioaudience -c r rstudio \
+ && conda clean --all -f -y    \
  && fix-permissions "/home/${NB_USER}"
 
 RUN pip install jupyter-rsession-proxy 
