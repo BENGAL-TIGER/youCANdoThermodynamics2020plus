@@ -10,14 +10,14 @@ USER $NB_UID
 #     fix-permissions "/home/${NB_USER}"
 
 
-RUN conda create -n studioaudience \
- && activate studioaudience \
- && conda install -c r rstudio \
- && conda clean --all -f -y    \
- && fix-permissions "/home/${NB_USER}"
+# RUN conda create -n studioaudience \
+#  && activate studioaudience \
+#  && conda install -c r rstudio \
+#  && conda clean --all -f -y    \
+#  && fix-permissions "/home/${NB_USER}"
 
-RUN pip install jupyter-rsession-proxy 
+RUN pip install jupyter-rsession-proxy nbgitpuller
 #  && pip install --no-cache notebook  \
-
+# pip install nbgitpuller
 
 RUN pip install --no-cache notebook
