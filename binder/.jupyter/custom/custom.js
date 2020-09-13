@@ -1,7 +1,7 @@
 // MathJax extensioons
 
-MathJax.Hub.Config({
-  TeX: {
+window.MathJax = {
+  tex: {
     extensions: [
       "color.js", // Color support in LaTeX
       "autobold.js", // support for \boldsymbol{...}
@@ -27,13 +27,22 @@ MathJax.Hub.Config({
       // Source code for all extensions:
       // https://github.com/mathjax/MathJax/tree/master/extensions/TeX
   }
-});
+};
 
-MathJax.Hub.Queue(
-  // ["resetEquationNumbers", MathJax.InputJax.TeX],
-  ["PreProcess", MathJax.Hub],
-  ["Reprocess", MathJax.Hub]
- );
+// MathJax.Hub.Queue(
+//   // ["resetEquationNumbers", MathJax.InputJax.TeX],
+//   ["PreProcess", MathJax.Hub],
+//   ["Reprocess", MathJax.Hub]
+//  );
 
-// http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
-MathJax.Hub.Configured()
+// // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
+// MathJax.Hub.Configured()
+
+
+
+(function () {
+  var script = document.createElement('script');
+  script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML";
+  script.async = true;
+  document.head.appendChild(script);
+})();
