@@ -2,4 +2,4 @@
 jupyter notebook --generate-config
 
 #
-cp -avr binder/custom ${HOME}/.jupyter
+cp -avr binder/.jupyter ${HOME}
