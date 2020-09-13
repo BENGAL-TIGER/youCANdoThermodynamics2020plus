@@ -880,4 +880,4 @@
 
 
 # mathjax
-c.NotebookApp.enable_mathjax = False
+# c.NotebookApp.enable_mathjax = False

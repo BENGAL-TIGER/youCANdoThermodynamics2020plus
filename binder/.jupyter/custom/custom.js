@@ -19,7 +19,7 @@ MathJax.Hub.Config({
       inlineMath: [["$", "$"], ["\\(", "\\)"]],
       displayMath: [["$$", "$$"], ["\\[", "\\]"]],
       processEscapes: true,
-    },
+    }
   // AutoNumbering of displayed formulas
       // equationNumbers: { autoNumber: "AMS" },
       // All mathjax extensions:
@@ -36,13 +36,13 @@ MathJax.Hub.Config({
 //  );
 
 // // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
-// MathJax.Hub.Configured()
+MathJax.Hub.Configured()
 
 
 
-(function () {
-  var script = document.createElement('script');
-  script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML";
-  script.async = true;
-  document.head.appendChild(script);
-})();
+// (function () {
+//   var script = document.createElement('script');
+//   script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML";
+//   script.async = true;
+//   document.head.appendChild(script);
+// })();
