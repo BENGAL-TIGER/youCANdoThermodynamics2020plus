@@ -2,4 +2,4 @@
 jupyter notebook --generate-config
 
 #
-rsync -r binder/custom /home/jovyan/.jupyter
+cp -avr binder/custom ${HOME}/.jupyter
