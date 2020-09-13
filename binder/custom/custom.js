@@ -24,5 +24,11 @@ MathJax.Hub.Config({
   }
 });
 
+MathJax.Hub.Queue(
+  // ["resetEquationNumbers", MathJax.InputJax.TeX],
+  ["PreProcess", MathJax.Hub],
+  ["Reprocess", MathJax.Hub]
+ );
+
 // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
-MathJax.Hub.Configured()
+// MathJax.Hub.Configured()
