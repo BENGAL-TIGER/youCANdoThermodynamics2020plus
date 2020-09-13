@@ -31,4 +31,4 @@ MathJax.Hub.Queue(
  );
 
 // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
-// MathJax.Hub.Configured()
+MathJax.Hub.Configured()
