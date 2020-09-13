@@ -1,7 +1,7 @@
 // MathJax extensioons
 
-window.MathJax = {
-  tex: {
+MathJax.Hub.Config({ 
+  TeX: {
     extensions: [
       "color.js", // Color support in LaTeX
       "autobold.js", // support for \boldsymbol{...}
@@ -27,7 +27,7 @@ window.MathJax = {
       // Source code for all extensions:
       // https://github.com/mathjax/MathJax/tree/master/extensions/TeX
   }
-};
+});
 
 // MathJax.Hub.Queue(
 //   // ["resetEquationNumbers", MathJax.InputJax.TeX],
