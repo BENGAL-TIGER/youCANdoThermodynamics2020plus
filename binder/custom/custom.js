@@ -85,5 +85,6 @@ MathJax.Hub.Config({
       ]
   }
 });
+
 // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
 MathJax.Hub.Configured()
