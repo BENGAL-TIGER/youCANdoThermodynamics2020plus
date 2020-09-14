@@ -1,5 +1,7 @@
 #
 # jupyter notebook --generate-config
 
+pip install "notebook<6"
+
 #
 # cp -avr binder/.jupyter ${HOME}
