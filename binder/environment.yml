@@ -1,6 +1,6 @@
 channels:
   - conda-forge
 dependencies:
-  - notebook
+  # - notebook
   # - jupyter_contrib_nbextensions
   - nbgitpuller
