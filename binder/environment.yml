@@ -3,4 +3,4 @@ channels:
 dependencies:
   # - notebook
   # - jupyter_contrib_nbextensions
-  - nbgitpuller
+  # - nbgitpuller
