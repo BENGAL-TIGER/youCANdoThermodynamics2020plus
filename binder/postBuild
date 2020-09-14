@@ -4,3 +4,7 @@
 
 #
 cp -avr binder/.jupyter ${HOME}
+
+# enable jupyter extensions
+jupyter nbextension enable livemdpreview/livemdpreview              
+jupyter nbextension enable equation-numbering/main
