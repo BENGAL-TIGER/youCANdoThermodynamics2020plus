@@ -4,4 +4,4 @@
 pip install "notebook<6"
 
 #
-# cp -avr binder/.jupyter ${HOME}
+cp -avr binder/.jupyter ${HOME}
