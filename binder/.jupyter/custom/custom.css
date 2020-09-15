@@ -196,7 +196,7 @@ section.toc > ol {
 
 .toc a:hover {
 	text-decoration: none!important;
-	color: rgb(var(--funkbrightyorange));
+	color: rgb(var(--coolassbrightblue));
 }
 
 .toc ol li::before {
