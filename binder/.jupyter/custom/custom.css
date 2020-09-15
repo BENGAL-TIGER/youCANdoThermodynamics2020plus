@@ -216,9 +216,19 @@ section.toc {
 	counter-increment: toc_section;
 }
 
+section.toc h2 {
+	/*margin-left: -1em;*/
+	/*float: left;*/
+	color: #454545!important;	
+}
+
+section.toc h2::before {
+	content: counter(toc_section)".\00a0";
+}
+
 section.toc > ol {
 	counter-reset: list_items;
-	padding-left: 0!important;
+	/*padding-left: 0!important;*/
 }
 
 .toc a {
@@ -235,6 +245,11 @@ section.toc > ol {
 	counter-increment: list_items;
 	content: counter(toc_section)"."counter(list_items) ".\00a0\00a0";
 }
+
+/*.toc ol li:first-of-type {
+	margin-top: 3em;
+}*/
+
 
 .toc ol li {
 	display: flex;
