@@ -52,13 +52,22 @@
 
 /*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
 
-body {
-	counter-reset: toc_section;
-	font-family: "LatoWeb";
+div#notebook-container.container {
+		font-family: "LatoWeb";
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
   color: var(--body-text-color);
+}
+
+
+body {
+	counter-reset: toc_section;
+/*	font-family: "LatoWeb";
+	font-variant-numeric: oldstyle-nums; 
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  color: var(--body-text-color);*/
 }
 
 body {
