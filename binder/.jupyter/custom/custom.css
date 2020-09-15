@@ -50,8 +50,10 @@
 	--cell: 200px;
 }
 
-/*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
 
+
+
+/*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
 div#notebook-container.container {
 		font-family: "LatoWeb";
 	font-variant-numeric: oldstyle-nums; 
@@ -97,7 +99,6 @@ span.cm-comment {
 }
 
 /*═════ top header ══════════════════════════════════════════════════════════80════5═══*/
-
 header.banner {
   height: 3em;
 }
@@ -128,9 +129,32 @@ div.banner img {
 }
 
 
+/*═════ index banner ════════════════════════════════════════════════════════80════5═══*/
+header.index {
+  /*height: 2em;*/
+}
+
+.index div.index {
+  position: absolute;
+	top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /* height: 2.5em; */
+}
+
+.index div.index div {
+  /*flex: 0;*/
+  align-items: center;
+  height: 100%;
+}
+  
+
+
 
 /*═════ citations ═══════════════════════════════════════════════════════════80════5═══*/
-
 .cite_textbook {
   font-family: "Cormorant Garamond", serif;
   font-variant-numeric: oldstyle-nums;
@@ -188,7 +212,6 @@ div.cite_textbook.ms9::after {
 
 
 /*═════ toc ═════════════════════════════════════════════════════════════════80════5═══*/
-
 section.toc {
 	counter-increment: toc_section;
 }
@@ -232,7 +255,6 @@ section.toc > ol {
 
 
 /*═════ tricks ══════════════════════════════════════════════════════════════80════5═══*/
-
 div.tricks {
 	height:1em;
 }
@@ -260,7 +282,6 @@ div.tricks div.tricks {
 
 
 /*═════ footer ══════════════════════════════════════════════════════════════80════5═══*/
-
 footer.psy {
 }
 
@@ -281,7 +302,6 @@ footer.psy div.psy {
 
 
 /*═════ figures ═════════════════════════════════════════════════════════════80════5═══*/
-
 figure {
 	counter-increment: figure_num;
 	margin: 2%;
