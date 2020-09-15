@@ -1,5 +1,21 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora&display=swap');
+@import "Lato2OFLWeb/Lato/latofonts.css";
+@import "https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=League+Script&family=Lora&display=swap');
+@font-face{
+  font-family: 'JetBrains Mono';
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/eot/JetBrainsMono-Regular.eot') format('embedded-opentype'),
+       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+       url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-variant-ligatures: none;
+}
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora&display=swap');*/
 
 
 :root {
@@ -24,6 +40,7 @@
   --tahitiblue: #000f89;		 
   --funkbrightyorange: 255, 64, 0;
   --coolassbrightblue: 0, 0, 196;
+  --coolassbrightpurple: 70, 29, 255;    /*  #461dff  */
   --killerbrightred: 255, 0, 38;
 	--bannerLRpadding: 0.5em;
 	--subtlegold: 252, 248, 227;
@@ -31,6 +48,34 @@
 	--neonblue: 91, 62, 246;
 	--dash: green;
 	--cell: 200px;
+}
+
+/*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
+
+body {
+	counter-reset: toc_section;
+	font-family: "LatoWeb";
+	font-variant-numeric: oldstyle-nums; 
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+  color: var(--body-text-color);
+}
+
+body {
+    font-feature-settings: "onum" 1;
+}
+@supports (font-variant-numeric: oldstyle-nums) {
+    body {
+        font-feature-settings: normal;
+        font-variant-numeric: oldstyle-nums;
+    }
+}
+
+
+span.cm-comment {
+	font-family: "Victor Mono", monospace;
+	/*font-style: italic;*/
+	font-variant-ligatures: nonoe;
 }
 
 
@@ -73,17 +118,179 @@ div.banner img {
   margin-right: 0em;
 }
 
+
+
+/*═════ citations ═══════════════════════════════════════════════════════════80════5═══*/
+
 .cite_textbook {
-  font-family: Lora serif;
+  font-family: "Cormorant Garamond", serif;
   font-variant-numeric: oldstyle-nums;
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 90%;
   color: rgba(var(--royalpurple),1);
   background-color: rgba(var(--royalpurple),0.15);
   padding: 0.35em 0.35em 0.35em 1em;
 }
 
-.cite_textbook.cb9::after {
-  content: " ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019). Thermodynamics: An engineering approach, 9e. McGraw-Hill Education.";
+
+
+div.cite_textbook.cb9 span::before {
+  content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)";
+	McGraw-Hill Education.";
 }
+div.cite_textbook.cb9 span::after {
+	content: "Thermodynamics: An engineering approach, 9e. ";
+	font-style: italic;
+}
+div.cite_textbook.cb9::after {
+	content: "\00a0 McGraw-Hill Education.";
+	/*font-style: normal;*/
+}
+
+
+
+div.cite_textbook.cb8 span::before {
+  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2015) ";
+}
+div.cite_textbook.cb8 span::after {
+	content: "Thermodynamics: An engineering approach, 8e. ";
+	font-style: italic;
+}
+div.cite_textbook.cb8::after {
+	content: "\00a0 McGraw-Hill Education.";
+	/*font-style: normal;*/
+}
+
+
+
+
+div.cite_textbook.ms9 span::before {
+  content: "⋮ Moran, et al (2018) ";
+}
+div.cite_textbook.ms9 span::after {
+	content: "Fundamentals of Engineering Thermodynamics, 9e, ";
+	font-style: italic;
+}
+div.cite_textbook.ms9::after {
+	content: "\00a0 978-1-119-39138-8, John Wiley & Sons, Inc.";
+	/*font-style: normal;*/
+}
+
+
+
+/*═════ toc ═════════════════════════════════════════════════════════════════80════5═══*/
+
+section.toc {
+	counter-increment: toc_section;
+}
+
+section.toc > ol {
+	counter-reset: list_items;
+	padding-left: 0!important;
+}
+
+.toc a {
+	text-decoration: none!important;
+	color: rgb(var(--body-text-color));
+}
+
+.toc a:hover {
+	text-decoration: none!important;
+	color: rgb(var(--funkbrightyorange));
+}
+
+.toc ol li::before {
+	counter-increment: list_items;
+	content: counter(toc_section)"."counter(list_items) ".\00a0\00a0";
+}
+
+.toc ol li {
+	display: flex;
+	margin-bottom: 2em;
+}
+
+.toc li p {
+	flex: 4 0;
+}
+
+.toc ol li img {
+	width: 20%;
+	height: 100%;
+	margin-top: 0;
+	/*flex: 0 1;*/
+	/*float: right;*/
+}
+
+
+/*═════ tricks ══════════════════════════════════════════════════════════════80════5═══*/
+
+div.tricks {
+	height:1em;
+}
+
+div.tricks div.tricks {
+	border: 1px solid rgba(var(--coolassbrightpurple),0.8); 
+	/*margin-right: 2.5em;*/
+	height: 0.5em; 
+	width: 100%; 
+	position: absolute; 
+	right:0; 
+	bottom:8%;
+}
+
+
+div.tricks span.tricks,
+div.tricks div.tricks {
+	border-color: #383838;
+	color: #383838;
+	font-weight: 100;
+}
+
+
+
+
+
+/*═════ footer ══════════════════════════════════════════════════════════════80════5═══*/
+
+footer.psy {
+}
+
+footer.psy div.psy {
+	position: absolute;
+	width: 100%;
+	right: 0;
+	background-color: #461d7c; 
+	color:rgba(253,208,35,0.35); 
+	line-height:2em; 
+	padding-left:1em; 
+	padding-right:0.5em; 
+	bottom:0; 
+/*		float:bottom; */
+	text-align:right;
+	font-style: italic;
+}
+
+
+/*═════ figures ═════════════════════════════════════════════════════════════80════5═══*/
+
+figure {
+	counter-increment: figure_num;
+	margin: 2%;
+	font-size: smaller;
+}
+	
+figcaption::before {
+	content: "Figure "counter(figure_num)". ";
+	font-weight: bolder;
+}
+
+
+/*═════ misc ════════════════════════════════════════════════════════════════80════5═══*/
+
+/*crystal clear backgrounds*/
+.crystal code {
+	background-color: transparent;
+}
+
+
 
