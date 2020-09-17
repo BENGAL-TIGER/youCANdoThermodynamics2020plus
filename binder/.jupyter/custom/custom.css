@@ -212,6 +212,10 @@ div.cite_textbook.ms9::after {
 
 
 /*═════ toc ═════════════════════════════════════════════════════════════════80════5═══*/
+section.toc.zero {
+	counter-reset: toc_section -1;
+}
+
 section.toc {
 	counter-increment: toc_section;
 }
