@@ -5,6 +5,12 @@
 #
 cp -avr binder/.jupyter ${HOME}
 
+
+# made my own mathjax initializer based on what jupyter provided
+cp binder/.jupyter/mathjaxutils.js  \
+    /srv/conda/envs/notebook/lib/python3.7/site-packages/notebook/static/notebook/js/
+
+
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
