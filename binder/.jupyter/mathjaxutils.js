@@ -22,14 +22,14 @@ define([
                 Tex: {
                     equationNumbers: { autoNumber: "AMS" },
                     extensions: [
-                      "color.js",     // Color support in LaTeX
-                      "autobold.js",  // support for \boldsymbol{...}
-                      "AMSmath.js",
-                      "AMSsymbols.js",
-                      "AMScd.js",     // http://www.jmilne.org/not/Mamscd.pdf
-                      "bbox.js",      // support for \bbox[options]{math}
-                      "cancel.js",    // support for strikethrough formulas
-                      "mhchem.js"     // chemical formulas
+                      'color.js',     // Color support in LaTeX
+                      'autobold.js',  // support for \boldsymbol{...}
+                      'AMSmath.js',
+                      'AMSsymbols.js',
+                      'AMScd.js',     // http://www.jmilne.org/not/Mamscd.pdf
+                      'bbox.js',      // support for \bbox[options]{math}
+                      'cancel.js',    // support for strikethrough formulas
+                      'mhchem.js',     // chemical formulas
                     ]
                 },
                 MathML: {
