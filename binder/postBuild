@@ -12,5 +12,5 @@ cp binder/.jupyter/mathjaxutils.js  \
 
 
 # enable jupyter extensions
-jupyter nbextension enable livemdpreview/livemdpreview              
-jupyter nbextension enable equation-numbering/main
+# jupyter nbextension enable livemdpreview/livemdpreview              
+# jupyter nbextension enable equation-numbering/main
