@@ -21,6 +21,8 @@
 :root {
   --body-text-color: #1e1c22;
   --body-text-color: 62, 58, 55;
+	--body-text-color-bluish: 22, 52, 74;
+	--body-text-color-blueblack: 17, 39, 56;
   /*--body-text-color: #444444;*/
   /*--body-text-color: red;*/
   --problem-row-badge-txt-color: #bfc3e1;		/* silver .  */
@@ -59,17 +61,17 @@ div#notebook-container.container {
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-  color: var(--body-text-color);
+  color: var(--coolassbrightblue);
 }
 
 
 body {
 	counter-reset: toc_section;
-/*	font-family: "LatoWeb";
+	font-family: "LatoWeb";
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-  color: var(--body-text-color);*/
+  color: var(--coolassbrightblue);
 }
 
 body {
@@ -83,12 +85,16 @@ body {
 }
 
 
+.text_cell_render.rendered_html {
+	color: rgba(var(--body-text-color-blueblack));
+}
+
+
 span.cm-comment {
 	font-family: "Victor Mono", monospace;
 	/*font-style: italic;*/
 	font-variant-ligatures: nonoe;
 }
-
 
 
 .boooty {
