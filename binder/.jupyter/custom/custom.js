@@ -1,98 +1,19 @@
-// MathJax.Hub.Config({
-//   tex2jax: {
-//       inlineMath: [["$", "$"], ["\\(", "\\)"]],
-//       displayMath: [["$$", "$$"], ["\\[", "\\]"]],
-//       processEscapes: true,
-//   },
-//   TeX: {
-//       Macros: {
-//           Alpha: "\\mbox{A}",
-//           Beta: "\\mbox{B}",
-//           Epsilon: "\\mbox{E}",
-//           Zeta: "\\mbox{Z}",
-//           Eta: "\\mbox{H}",
-//           Iota: "\\mbox{I}",
-//           Kappa: "\\mbox{K}",
-//           Mu: "\\mbox{M}",
-//           Nu: "\\mbox{N}",
-//           Omicron: "\\mbox{O}",
-//           Rho: "\\mbox{P}",
-//           Tau: "\\mbox{T}",
-//           Chi: "\\mbox{X}",
-//           and: "\\mbox{&}",
-//           or: "\\lor",
-//           exist: "\\exists",
-//           empty: "\\emptyset",
-//           P: "\\mbox{P}",
-//           tan: "\\operatorname{tg}",   // tangent
-//           tg: "\\operatorname{tg}",    // tangent
-//           cot: "\\operatorname{ctg}",  // cotangent
-//           ctg: "\\operatorname{ctg}",  // cotangent
-//           csc: "\\operatorname{cosec}",     // cosecant
-//           cosec: "\\operatorname{cosec}",   // cosecant
-//           arctan: "\\operatorname{arctg}",  // arctangent
-//           arctg: "\\operatorname{arctg}",   // arctangent
-//           arccot: "\\operatorname{arcctg}",      // arc cotangent
-//           arcctg: "\\operatorname{arcctg}",      // arc cotangent
-//           arcsec: "\\operatorname{arcsec}",      // arc secant
-//           arccsc: "\\operatorname{arccosec}",    // arc cosecant
-//           arccosec: "\\operatorname{arccosec}",  // arc cosecant
-//           sh: "\\operatorname{sh}",     // hyperbolic sine
-//           ch: "\\operatorname{ch}",     // hyperbolic cosine
-//           th: "\\operatorname{th}",     // hyperbolic tangent
-//           cth: "\\operatorname{cth}",   // hyperbolic cotangent
-//           sinh: "\\operatorname{sh}",   // hyperbolic синус
-//           cosh: "\\operatorname{ch}",   // hyperbolic cosine
-//           tanh: "\\operatorname{th}",   // hyperbolic tangent
-//           coth: "\\operatorname{cth}",  // hyperbolic cotangent
-//           sgn: "\\operatorname{sgn}",
-//           mod: "\\operatorname{mod}",
-//           ge: "\\geqslant",
-//           le: "\\leqslant",
-//           geq: "\\geqslant",
-//           leq: "\\leqslant",
-//           N: "\\mathbb{N}",
-//           R: "\\mathbb{R}",
-//           Q: "\\mathbb{Q}",
-//           Z: "\\mathbb{Z}",
-//           C: "\\mathbb{C}",
-//           H: "\\mathbb{H}",
-//           P: "\\mathbb{P}",
-//           dmtr: "\\unicode{x2300}", // diameter sign
-//           deg: "\\unicode{xb0}",    // degree sign
-//           celdeg: "\\unicode{x2103}"   // degree Celsius sign
-//       },
-//       // AutoNumbering of displayed formulas
-//       equationNumbers: { autoNumber: "AMS" },
-//       // All mathjax extensions:
-//       // http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-extensions
-//       // Source code for all extensions:
-//       // https://github.com/mathjax/MathJax/tree/master/extensions/TeX
-//       extensions: [
-//           "color.js", // Color support in LaTeX
-//           "autobold.js", // support for \boldsymbol{...}
-//           "AMSmath.js",
-//           "AMSsymbols.js",
-//           "AMScd.js", // http://www.jmilne.org/not/Mamscd.pdf
-//           "bbox.js", // support for \bbox[options]{math}
-//           // "begingroup.js", // mainly for formulas localization
-//           "cancel.js", // support for strikethrough formulas
-//           // "HTML.js" // works by default
-//           "mhchem.js" // chemical formulas
-//           // "uniconde.js" // works by default
-//       ]
-//   }
-// });
-// // http://docs.mathjax.org/en/latest/configuration.html#configuring-mathjax-after-it-is-loaded
-// MathJax.Hub.Configured()
+/*
+ *  /MathJax-v2/extensions/TeX/autoload-all.js
+ *
+ *  Copyright (c) 2009-2018 The MathJax Consortium
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
 
-
-
-
-MathJax.Hub.Config({
-  TeX: {
-    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"]
-  }
-});
-
-MathJax.Hub.Configured();
+MathJax.Extension["TeX/autoload-all"]={version:"2.7.9"};MathJax.Hub.Register.StartupHook("TeX Jax Ready",function(){var h={action:["mathtip","texttip","toggle"],AMSmath:["mathring","nobreakspace","negmedspace","negthickspace","intI","iiiint","idotsint","dddot","ddddot","sideset","boxed","substack","injlim","projlim","varliminf","varlimsup","varinjlim","varprojlim","DeclareMathOperator","operatorname","genfrac","tfrac","dfrac","binom","tbinom","dbinom","cfrac","shoveleft","shoveright","xrightarrow","xleftarrow"],begingroup:["begingroup","endgroup","gdef","global"],cancel:["cancel","bcancel","xcancel","cancelto"],color:["color","textcolor","colorbox","fcolorbox","definecolor"],enclose:["enclose"],extpfeil:["Newextarrow","xlongequal","xmapsto","xtofrom","xtwoheadleftarrow","xtwoheadrightarrow"],mhchem:["ce","cee","cf"]};var c={AMSmath:["subarray","smallmatrix","equation","equation*"],AMScd:["CD"]};var d,g,b,a={macros:{},environment:{}};for(d in h){if(h.hasOwnProperty(d)){if(!MathJax.Extension["TeX/"+d]){var f=h[d];for(g=0,b=f.length;g<b;g++){a.macros[f[g]]=["Extension",d]}}}}for(d in c){if(c.hasOwnProperty(d)){if(!MathJax.Extension["TeX/"+d]){var e=c[d];for(g=0,b=e.length;g<b;g++){a.environment[e[g]]=["ExtensionEnv",null,d]}}}}MathJax.InputJax.TeX.Definitions.Add(a);MathJax.Hub.Startup.signal.Post("TeX autoload-all Ready")});MathJax.Callback.Queue(["Require",MathJax.Ajax,"[MathJax]/extensions/TeX/AMSsymbols.js"],["loadComplete",MathJax.Ajax,"[MathJax]/extensions/TeX/autoload-all.js"]);
