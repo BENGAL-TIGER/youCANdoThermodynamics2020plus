@@ -1,6 +1,15 @@
+/* MathJax autonumbering, use mhchem v3
+═════════════════════════════════════════════════════════════════════════════80════5═══*/
+MathJax.Hub.Config({
+  TeX: { 
+    equationNumbers: { autoNumber: "AMS" },
+    mhchem: { legacy: true }
+  }
+});
+
+
 /* Just run TeX/autoload-all.js here, directly
 ═════════════════════════════════════════════════════════════════════════════80════5═══*/
-
 /*
  *  /MathJax-v2/extensions/TeX/autoload-all.js
  *
