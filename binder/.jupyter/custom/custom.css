@@ -86,9 +86,10 @@ body {
 
 
 .text_cell_render.rendered_html {
-	/*color: rgba(var(--body-text-color-blueblack));*/
-	color: green;
+	color: rgba(var(--body-text-color-blueblack));
+	/*color: green;*/
 }
+
 
 
 span.cm-comment {
