@@ -3,7 +3,7 @@
 MathJax.Hub.Config({
   TeX: { 
     equationNumbers: { autoNumber: "AMS" },
-    mhchem: { legacy: true }
+    mhchem: { legacy: false }
   }
 });
 
