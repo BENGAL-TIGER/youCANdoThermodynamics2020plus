@@ -236,7 +236,7 @@ section.toc h2 {
 }
 
 section.toc h2::before {
-	content: counter(toc_section)".\00a0";
+	content: counter(toc_section, upper-greek)".\00a0";
 }
 
 section.toc > ol {
@@ -256,7 +256,7 @@ section.toc > ol {
 
 .toc ol li::before {
 	counter-increment: list_items;
-	content: counter(toc_section)"."counter(list_items) ".\00a0\00a0";
+	content: counter(toc_section, lower-greek)"."counter(list_items) "\00a0\00a0";
 }
 
 /*.toc ol li:first-of-type {
