@@ -99,6 +99,20 @@ span.cm-comment {
 	font-variant-ligatures: nonoe;
 }
 
+h6#crazyindent {
+	display: none;
+}
+h6#crazyindent + h2,
+h6#crazyindent + h3 {
+	margin-left: -0.6em;
+	position: absolute;
+	/*color: #0a0130;*/
+}
+h6#crazyindent + h2 + h2,
+h6#crazyindent + h3 + h3 {
+	visibility: hidden;
+}
+
 
 .boooty {
   height: 200px;
@@ -345,9 +359,14 @@ figcaption::before {
 /*═════ misc ════════════════════════════════════════════════════════════════80════5═══*/
 
 /*crystal clear backgrounds*/
-.crystal code {
+
+div.transcode pre * { 
 	background-color: transparent;
 }
 
+.transcode code,
+.transcode pre {
+	background-color: rgba(255,255,255,0.45);
+}
 
 
