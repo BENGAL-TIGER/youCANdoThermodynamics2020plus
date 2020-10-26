@@ -124,6 +124,12 @@ span.cm-comment {
 	font-variant-ligatures: nonoe;
 }
 
+#Attack {
+	color: #1b0b3a;
+	font-family: LatoWebBlack;
+	font-size: 2.75em;
+}
+
 h6#crazyindent {
 	display: none;
 }
