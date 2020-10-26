@@ -70,7 +70,7 @@
 
 /*═════ fnots and such ══════════════════════════════════════════════════════80════5═══*/
 div#notebook-container.container {
-		font-family: "LatoWeb";
+	font-family: "LatoWeb";
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -494,6 +494,16 @@ div.transcode pre * {
 .mcs-bs-callout-danger:hover h4 {
     /*color: #d9534f;*/
     color: var(--danger-hover);
+}
+.mcs-bs-callout-danger.extra { 
+    border-color: var(--danger-hover);
+    background: #f2dede;
+}
+.mcs-bs-callout-danger.extra h4 { 
+    color: var(--danger-hover);
+		/*font-variant: small-caps;*/
+		font-family: LatoWebBlack;
+		font-size: 125%;
 }
 
 
