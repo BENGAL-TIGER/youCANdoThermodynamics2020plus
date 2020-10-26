@@ -244,6 +244,21 @@ div.cite_textbook.cb8::after {
 
 
 
+div.cite_textbook.cb7 span::before {
+  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2011) ";
+}
+div.cite_textbook.cb7 span::after {
+	content: "Thermodynamics: An engineering approach, 7e. ";
+	font-style: italic;
+}
+div.cite_textbook.cb7::after {
+	content: "\00a0 McGraw-Hill Education, New York";
+	/*font-style: normal;*/
+}
+
+
+
+
 div.cite_textbook.ms9 span::before {
   content: "⋮ Moran, et al (2018) ";
 }
