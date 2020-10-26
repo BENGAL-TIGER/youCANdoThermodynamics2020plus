@@ -58,6 +58,7 @@
   --info: #17a2b8;
   --info-hover: #117a8b;
   --warning: #ffc107;
+  --warning: #f0ae4e;
 	--warning-hover: #d39e00;
   --danger: #dc3545;
 	--danger-hover: #bd2130;
@@ -516,9 +517,29 @@ div.transcode pre * {
     color: #f0ad4e;
 		color: #8a6d3a;
 		color: #f0ae4e;
+		color:  var(--warning);
+}
+.mcs-bs-callout-warning.extra {
+    border-color: #b56101;
+    color: #8a6d3a;
+		background: #fbf8e3;
+}
+.mcs-bs-callout-warning.extra h4 {
+    color: #b56101;
+		font-family: LatoWebBlack;
+		font-size: 125%;
+}
+.mcs-bs-callout-warning.extra:hover {
+    border-color: #ec971f;
+}
+.mcs-bs-callout-warning.extra:hover h4 {
+    color: #ec971f;
+		font-family: LatoWebBlack;
+		font-size: 125%;
 }
 
 
+		
 .mcs-bs-callout-info {
     /*border-left-color: #5bc0de;*/
     border-left-color: #17a2b8;
