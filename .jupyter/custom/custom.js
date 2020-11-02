@@ -1,3 +1,23 @@
+
+
+
+// .  https:jsfiddle.net/tovic/AbpRD/
+
+(function() {
+    var pre = document.querySelectorAll(".mcs-numberLines pre"),
+        pl = pre.length;
+    for (var i = 0; i < pl; i++) {
+        pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
+        var num = pre[i].innerHTML.split(/\n/).length;
+        for (var j = 0; j < num; j++) {
+            var line_num = pre[i].getElementsByTagName('span')[0];
+            line_num.innerHTML += '<span>' + (j + 1) + '</span>';
+        }
+    }
+})();
+
+
+
 /* MathJax autonumbering, use mhchem v3
 ═════════════════════════════════════════════════════════════════════════════80════5═══*/
 MathJax.Hub.Config({
@@ -336,6 +356,11 @@ null,!0),MathJax.Hub.Register.StartupHook("TeX AMSmath Ready",function(){n.Defin
 null,!0)}),n.Parse.Augment({
 CE:function(t){var n=this.GetArgument(t),e=a(n).Parse();this.string=e+this.string.substr(this.i),this.i=0},
 PU:function(t){var n=this.GetArgument(t),e=a(n).Parse("pu");this.string=e+this.string.substr(this.i),this.i=0}}),MathJax.Hub.Startup.signal.Post("TeX mhchem Ready")}),MathJax.Ajax.loadComplete("[mhchem]/mhchem.js");
+
+
+
+
+
 
 
 
