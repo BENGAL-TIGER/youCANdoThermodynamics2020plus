@@ -3,6 +3,7 @@ channels:
 dependencies:
   - jupyter_contrib_nbextensions
   - nbgitpuller
+  - pint
 
 
 
