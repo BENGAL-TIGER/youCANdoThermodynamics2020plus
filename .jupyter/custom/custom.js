@@ -17,7 +17,7 @@
 })();
 
 
-
+//https:stackoverflow.com/questions/51029897/jupyter-notebook-why-are-custom-mathjax-macros-not-working-on-file-open
 /* MathJax autonumbering, use mhchem v3
 ═════════════════════════════════════════════════════════════════════════════80════5═══*/
 MathJax.Hub.Config({
@@ -38,10 +38,15 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
 			LatoText:   ["Macro", "\\style{font-family: LatoWeb;}{\\text{#1}}", 1],
 			LatoTextit: ["Macro", "\\style{font-family: LatoWeb; font-style: italic;}{\\textit{#1}}", 1],
 			LatoMath:   ["Macro", "\\style{font-family: LatoWeb;}{\\mathsf{#1}}", 1],
-			LatoMathit: ["Macro", "\\style{font-family: LatoWeb; font-style: italic;}{\\mathsf{#1}}", 1]
+			LatoMathit: ["Macro", "\\style{font-family: LatoWeb; font-style: italic;}{\\mathsf{#1}}", 1],
+			overbar:    ["Macro", "\\mkern 1.5mu\\overline{\\mkern+0mu#1\\mkern-2mu}\\mkern 1.5mu", 1],
+			overbari:   ["Macro", "\\mkern 1.5mu\\overline{\\mkern-2mu#1\\mkern+0mu}\\mkern 1.5mu", 1]
     }
   });
 });
+
+
+
 
 /* Just run TeX/autoload-all.js here, directly
 ═════════════════════════════════════════════════════════════════════════════80════5═══*/

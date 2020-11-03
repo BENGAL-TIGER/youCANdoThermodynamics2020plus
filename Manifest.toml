@@ -775,6 +775,12 @@ git-tree-sha1 = "2b643523d52fc9fb4fe0729e6561d066055d58d8"
 uuid = "1986cc42-f94f-5a68-af5c-568840ba703d"
 version = "1.5.0"
 
+[[UnitfulRecipes]]
+deps = ["RecipesBase", "Unitful"]
+git-tree-sha1 = "f3c5806d520c0a53ab4755e4556e29d5b3479987"
+uuid = "42071c24-d89e-48dd-8a24-8a12d9b8861f"
+version = "1.0.0"
+
 [[WebIO]]
 deps = ["AssetRegistry", "Base64", "Distributed", "FunctionalCollections", "JSON", "Logging", "Observables", "Pkg", "Random", "Requires", "Sockets", "UUIDs", "WebSockets", "Widgets"]
 git-tree-sha1 = "add6b526464ab77e9decef9d2dafa46c54af6617"
