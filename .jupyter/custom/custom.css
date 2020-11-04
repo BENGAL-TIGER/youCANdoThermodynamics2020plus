@@ -241,40 +241,50 @@ header.index {
 
 /*═════ citations ═══════════════════════════════════════════════════════════80════5═══*/
 .cite_textbook {
-  font-family: "Cormorant Garamond", serif;
   font-variant-numeric: oldstyle-nums;
-  /*font-style: italic;*/
   font-size: 90%;
   color: rgba(var(--royalpurple),1);
-  background-color: rgba(var(--royalpurple),0.15);
   padding: 0.35em 0.35em 0.35em 1em;
+}
+div.cite_textbook {
+	background-color: rgba(var(--royalpurple),0.15);
+  font-family: "Cormorant Garamond", serif;
+}
+span.cite_textbook {
+	padding: 0;
+	color: #1b0b3a;
+}
+span.cite_textbook::before {
+	content: '\00000a';
 }
 
 
 
-div.cite_textbook.cb9 span::before {
+
+.cite_textbook.cb9 span::before {
   content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)";
 	McGraw-Hill Education.";
 }
-div.cite_textbook.cb9 span::after {
+.cite_textbook.cb9 span::after {
 	content: "Thermodynamics: An engineering approach, 9e. ";
 	font-style: italic;
 }
-div.cite_textbook.cb9::after {
+.cite_textbook.cb9::after {
 	content: "\00a0 McGraw-Hill Education.";
 	/*font-style: normal;*/
 }
 
 
 
-div.cite_textbook.cb8 span::before {
-  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2015) ";
+
+.cite_textbook.cb8 span::before {
+  content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A. (2015) ";
 }
-div.cite_textbook.cb8 span::after {
+.cite_textbook.cb8 span::after {
 	content: "Thermodynamics: An engineering approach, 8e. ";
 	font-style: italic;
 }
-div.cite_textbook.cb8::after {
+.cite_textbook.cb8::after {
 	content: "\00a0 McGraw-Hill Education.";
 	/*font-style: normal;*/
 }
@@ -282,29 +292,29 @@ div.cite_textbook.cb8::after {
 
 
 
-div.cite_textbook.cb7 span::before {
-  content: "\00a0⋮ Çengel, Y. A., Boles, M. A. (2011) ";
+.cite_textbook.cb7 span::before {
+  content: "⋮ Çengel, Y. A., Boles, M. A. (2011) ";
 }
-div.cite_textbook.cb7 span::after {
+.cite_textbook.cb7 span::after {
 	content: "Thermodynamics: An engineering approach, 7e. ";
 	font-style: italic;
 }
-div.cite_textbook.cb7::after {
-	content: "\00a0 McGraw-Hill Education, New York";
+.cite_textbook.cb7::after {
+	content: "\00a0 McGraw-Hill Education, New York.";
 	/*font-style: normal;*/
 }
 
 
 
 
-div.cite_textbook.ms9 span::before {
+.cite_textbook.ms9 span::before {
   content: "⋮ Moran, et al (2018) ";
 }
-div.cite_textbook.ms9 span::after {
+.cite_textbook.ms9 span::after {
 	content: "Fundamentals of Engineering Thermodynamics, 9e, ";
 	font-style: italic;
 }
-div.cite_textbook.ms9::after {
+.cite_textbook.ms9::after {
 	content: "\00a0 978-1-119-39138-8, John Wiley & Sons, Inc.";
 	/*font-style: normal;*/
 }
@@ -318,6 +328,7 @@ section.toc.zero {
 
 section.toc {
 	counter-increment: toc_section;
+	counter-reset: list_items;
 }
 
 section.toc h2 {
@@ -331,7 +342,7 @@ section.toc h2::before {
 }
 
 section.toc > ol {
-	counter-reset: list_items;
+	/*counter-reset: list_items;*/
 	/*padding-left: 0!important;*/
 }
 
@@ -391,7 +402,11 @@ section.toc > ol {
 	/*float: right;*/
 }
 
-
+.toc ol li a  {
+	display:  inline;
+	/*border: 1px solid red;*/
+	padding-right: 0.5em;
+}
 /*═════ tricks ══════════════════════════════════════════════════════════════80════5═══*/
 div.tricks {
 	height:1em;
@@ -513,6 +528,20 @@ div.transcode pre * {
 }
 .mcs-bs-callout-success h4 {
     color: #5cb85c;
+}
+.mcs-bs-callout-success.extra {
+    border-color: #439d44;
+    background: #dff0d8;
+}
+.mcs-bs-callout-success.extra h1, 
+.mcs-bs-callout-success.extra h2, 
+.mcs-bs-callout-success.extra h3, 
+.mcs-bs-callout-success.extra h4, 
+.mcs-bs-callout-success.extra h5, 
+.mcs-bs-callout-success.extra h6 {
+	font-family: LatoWebHeavy;
+	color: #439d44;
+	/*font-size: 1.25em;*/
 }
 
 
