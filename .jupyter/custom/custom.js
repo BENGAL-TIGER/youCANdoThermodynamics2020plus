@@ -4,7 +4,7 @@
 // .  https:jsfiddle.net/tovic/AbpRD/
 
 (function() {
-    var pre = document.querySelectorAll(".mcs-numberLines pre"),
+    var pre = document.querySelectorAll("* *.mcs-numberLines pre"),
         pl = pre.length;
     for (var i = 0; i < pl; i++) {
         pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
