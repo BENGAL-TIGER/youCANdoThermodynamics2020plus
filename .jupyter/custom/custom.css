@@ -27,7 +27,6 @@
 	--body-text-color-blueblackblack: 6, 13, 19;
   /*--body-text-color: #444444;*/
   /*--body-text-color: red;*/
-  --problem-row-badge-txt-color: #bfc3e1;		/* silver .  */
   /* --problem-row-badge-txt-color: red;		silver .  */
   /*--problem-row-badge-bg-color:  #000f89;		/* Tahiti Blue .  *!/*/
   /*--problem-head-txt-color:        var(--problem-row-badge-txt-color);*/
@@ -41,7 +40,6 @@
   --code-cell-bkg-color:  #f7f7ff;
   --code-cell-bkg-color:  250, 247, 245;
 	--cerulean: 41, 75, 173;
-  --tahitiblue: #000f89;		 
   --funkbrightyorange: 255, 64, 0;
   --coolassbrightblue: 0, 0, 196;
   --coolassbrightpurple: 70, 29, 255;    /*  #461dff  */
@@ -52,6 +50,9 @@
 	--neonblue: 91, 62, 246;
 	--dash: green;
 	--cell: 200px;
+	
+	
+/* ___.mcs __________________________________    */
 	--primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
@@ -77,8 +78,142 @@
 	--mcs_gray_700: #495057;
 	--mcs_gray_800: #343a40;
 	--mcs_gray_900: #212529;
+	
+  --xargentum: #bfc3e1;		/* silver .  */
+  --argentum: 191, 195, 225;
+  --xtahitiblue: #000f89;
+	--tahitiblue: 0, 15, 137;
+	--royalpurple: 70, 29, 124;
 
 }
+
+/*═════ kill stupid jupyterisms ══════════════════════════════════════════════80════5═══*/
+
+.rendered_html tr,
+.rendered_html th,
+.rendered_html td {
+  text-align: initial;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: inherit;
+}
+.rendered_html .table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+/*═════ jupyter costumations ═════════════════════════════════════════════════80════5═══*/
+
+/*___ widen rendered md output cells _______ */
+div.prompt {       
+  min-width: 15ex;   /*   original     */ 
+}
+.text_cell div.prompt.input_prompt {       /* ONLY md cells*/
+  min-width: 5px;  
+	/*border: 1px solid red;*/
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);    /*   original     */ 
+  background: initial;   
+}
+
+.rendered_html pre {
+	background-color: fff;     /*   original     */ 
+	background-color: rgba(255, 255, 255, 0.8);
+	/*background-color: black;*/
+	padding: 0.5em;
+	border-radius: 5px;
+}
+.rendered_html pre code {
+  background-color: transparent;
+}
+
+/*═════ borders ══════════════════════════════════════════════════════════════80════5═══*/
+[class*="mcs"].border,
+[class*="mcs"] .border {
+	border: 1px solid;
+}
+[class*="mcs"].border-bottom,
+[class*="mcs"] .border-bottom {
+	border-bottom: 1px solid;
+}
+
+mcs-brad-5px,
+[class*="mcs"].brad-5px,
+[class*="mcs"] .brad-5px {
+	border-radius: 5px;
+}
+
+
+/*═════ tables ═══════════════════════════════════════════════════════════════80════5═══*/
+[class*="mcs"].table,
+[class*="mcs"] .table,
+.mcs-table * {
+	/*border: 4px solid #333;*/
+/*	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;*/
+	/*background: white;*/
+}
+
+.mcs-table td {
+	vertical-align: top;
+}
+
+[class*="mcs"].table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;     /*   original     */ 
+  background-color: rgba(66, 165, 245, 0.2);
+	border-radius: 14em;
+}
+/*═════ typography ═══════════════════════════════════════════════════════════80════5═══*/
+.mcs-u,
+[class*="mcs"] div.u,
+[class*="mcs"] td.u > div {
+	border-bottom: 1px solid;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	text-align: center;
+    white-space: nowrap;
+}
+[class*="mcs"] td.u + td {
+	/*background-color: orange;*/
+}
+
+
+
+.mcs-Lblk {
+	font-family: LatoWebBlack;
+}
+.mcs-Lhvy {
+	font-family: LatoWebHeavy;
+}
+.mcs-Lsmb {
+	font-family: LatoWebSemibold;
+	font-size: 1em;
+}
+.mcs-Lhvy {
+	font-family: LatoWebHeavy;
+}
+.mcs-Llite {
+	font-family: LatoWebLight;
+}
+.mcs-Lthin {
+	font-family: LatoWebThin;
+}
+.mcs-Lhair {
+	font-family: LatoWebHairline;
+}
+
+
 
 .text-tiger {
 	color: var(--tiger);
@@ -86,12 +221,86 @@
 .bg-tiger {
 	background-color: rgba(70, 29, 255, 0.3);
 }
+
+.text-subtlegold {
+	color: rgba(var(--subtlegold),1);
+}
 .bg-subtlegold {
 	background-color: rgba(var(--subtlegold),1);
 }
 
-/*═════ booty ═══════════════════════════════════════════════════════════════80════5═══*/
+.mcs-text-argentum {
+	color: var(--xargentum);
+}
+.mcs-bg-argentum {
+	background-color: var(--xargentum);
+}
 
+.mcs-text-tahitiblue {
+	color: var(--xtahitiblue);
+}
+.mcs-bg-tahitiblue {
+	background-color: var(--xtahitiblue);
+}
+
+/*═════ badges ═══════════════════════════════════════════════════════════════80════5═══*/
+[class*="mcs"] .badge.left {
+/*	margin-right: auto;
+	margin-left: 0;*/
+	float: left;
+}
+[class*="mcs"] .badge.right {
+/*	margin-right: 0;
+	margin-left: auto;*/
+	float: right;
+}
+
+.tahitiblue-argentum {
+	color: var(--xtahitiblue);
+	background-color: var(--xargentum);
+}
+.argentum-tahitiblue {
+	background-color: var(--xtahitiblue);
+	color: var(--xargentum);
+}
+.mcs-primary.badge {
+	background-color: var(--primary);
+}
+.mcs-secondary.badge {
+	background-color: var(--secondary);
+}
+.mcs-success.badge {
+	background-color: var(--success);
+}
+.mcs-info.badge {
+	background-color: var(--info);
+}
+.mcs-info.badge {
+	background-color: var(--info-hover);
+}
+.mcs-warning.badge {
+	background-color: var(--warning);
+}
+.mcs-warning.badge:hover {
+	background-color: var(--warning-hover);
+}
+.mcs-danger.badge {
+	background-color: var(--danger);
+}
+.mcs-danger.badge:hover {
+	background-color: var(--danger-hover);
+}
+.mcs-light.badge {
+	background-color: var(--light);
+}
+.mcs-dark.badge {
+	background-color: var(--dark);
+}
+.mcs-tiger.badge {
+	background-color: var(--tiger);
+}
+
+/*═════ booty ═══════════════════════════════════════════════════════════════80════5═══*/
 
 
 
@@ -802,7 +1011,7 @@ div.mcs-numberLines {
   overflow: auto;
   margin:0 0 1em;
   /*padding:.5em 1em;*/
-  padding:.5em 0;
+  padding: 0.5em 0;
 }
 
 .mcs-numberLines pre code,
