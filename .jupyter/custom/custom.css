@@ -87,6 +87,25 @@
 
 }
 
+/*booty*/
+rendered_html .MathJax_Display #intertext {
+	color: blue;
+}
+
+/*═════ bs mods ══════════════════════════════════════════════════════════════80════5═══*/
+
+
+.hbox.space-between,
+.vbox.space-between,
+.space-between {
+  /* Old browsers */
+  -webkit-box-pack: space-between;
+  -moz-box-pack: space-between;
+  box-pack: space-between;
+  /* Modern browsers */
+  justify-content: space-between;
+}
+
 /*═════ kill stupid jupyterisms ══════════════════════════════════════════════80════5═══*/
 
 .rendered_html tr,
@@ -102,6 +121,11 @@
 }
 
 /*═════ jupyter costumations ═════════════════════════════════════════════════80════5═══*/
+.rendered_html {
+  color: #000;
+  color: rgba(38, 42, 47, 1.00);
+  /* any extras will just be numbers: */
+}
 
 /*___ widen rendered md output cells _______ */
 div.prompt {       
@@ -165,9 +189,18 @@ mcs-brad-5px,
 	/*background: white;*/
 }
 
-.mcs-table td {
-	vertical-align: top;
+.mcs-table.fullwidth {
+	/*width: 100%;*/
+	table-layout: auto;
 }
+.mcs-table.fullwidth tr {
+	width: 100%;
+}
+.mcs-table.fullwidth td {
+	width: 1%;
+	white-space:nowrap;
+}
+
 
 [class*="mcs"].table-hover > tbody > tr:hover {
   background-color: #f5f5f5;     /*   original     */ 
@@ -179,8 +212,8 @@ mcs-brad-5px,
 [class*="mcs"] div.u,
 [class*="mcs"] td.u > div {
 	border-bottom: 1px solid;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
 	text-align: center;
     white-space: nowrap;
 }
@@ -188,7 +221,11 @@ mcs-brad-5px,
 	/*background-color: orange;*/
 }
 
-
+.mcs-bodytext {
+	color: rgba(52, 58, 64, 1.00);
+	color: var(--mcs_gray_900);
+/*	padding-right: 100vw;*/
+}
 
 .mcs-Lblk {
 	font-family: LatoWebBlack;
@@ -358,12 +395,55 @@ body {
 	color: var(--primary);
 }
 
-/*═════ special fonts ═══════════════════════════════════════════════════════80════5═══*/
+/*═════ fonts ═══════════════════════════════════════════════════════════════80════5═══*/
 
 .mcs-LatoWeb {
 	font-family: LatoWeb!important;
 	background: red!important;
 }
+
+[class*="mcs-ftsz-075"] {
+	font-size: 0.75em;
+}
+[class*="mcs-ftsz-080"] {
+	font-size: 0.80em;
+}
+[class*="mcs-ftsz-085"] {
+	font-size: 0.85em;
+}
+[class*="mcs-ftsz-090"] {
+	font-size: 0.90em;
+}
+[class*="mcs-ftsz-085"] {
+	font-size: 0.95em;
+}
+[class*="mcs-ftsz-100"] {
+	font-size: 1em;
+}
+[class*="mcs-ftsz-105"] {
+	font-size: 1.05em;
+}
+[class*="mcs-ftsz-110"] {
+	font-size: 1.10em;
+}
+[class*="mcs-ftsz-115"] {
+	font-size: 1.15em;
+}
+[class*="mcs-ftsz-120"] {
+	font-size: 1.20em;
+}
+[class*="mcs-ftsz-125"] {
+	font-size: 1.25em;
+}
+[class*="mcs-ftsz-130"] {
+	font-size: 1.30em;
+}
+
+
+
+
+
+
 
 span.cm-comment {
 	font-family: "Victor Mono", monospace;
@@ -706,6 +786,16 @@ footer.psy div.psy {
 	font-style: italic;
 }
 
+.mcs-psy-nav {
+	background-color: #250253; 
+	color:rgba(253,208,35,0.65); 
+	font-family:LatoWebHairline;
+}
+.mcs-psy-nav div {
+	width: 100%;
+	padding: 0 12px 5px 0;
+}
+
 
 /*═════ figures ═════════════════════════════════════════════════════════════80════5═══*/
 figure {
@@ -946,8 +1036,7 @@ div.transcode pre * {
 */
 
 
-/*═════ mcs style ═══════════════════════════════════════════════════════════80════5═══*/
-
+/*═════ spacing ═════════════════════════════════════════════════════════════80════5═══*/
 .mcs-mb-1em {
 	margin-bottom: 1em;
 }
@@ -965,10 +1054,53 @@ div.transcode pre * {
 	margin-top: 0;
 }
 
-.mcs-p-1em {
+.mcs-p-em100 {
 	padding: 1em;
 }
+.mcs-pt-em100 {
+	padding-tpo: 1em;
+}
+.mcs-pr-em100 {
+	padding-right: 1em;
+}
+.mcs-pb-em100 {
+	padding-bottom: 1em;
+}
+.mcs-pl-em100 {
+	padding-left: 1em;
+}
+.mcs-px-em100 {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.mcs-py-em100 {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
 
+.mcs-p-em200 {
+	padding: 2em;
+}
+.mcs-pt-em200 {
+	padding-tpo: 2em;
+}
+.mcs-pr-em200 {
+	padding-right: 2em;
+}
+.mcs-pb-em200 {
+	padding-bottom: 2em;
+}
+.mcs-pl-em200 {
+	padding-left: 2em;
+}
+.mcs-px-em200 {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.mcs-py-em200 {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
 /*═════ misc ════════════════════════════════════════════════════════════════80════5═══*/
 
 /*crystal clear backgrounds*/
