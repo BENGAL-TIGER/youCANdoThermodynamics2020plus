@@ -157,7 +157,7 @@ div.input_prompt {
 
 .rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);    /*   original     */ 
-  background: initial;   
+  /*background: initial;   */
 }
 
 .rendered_html pre {
@@ -362,7 +362,10 @@ mcs-brad-5px,
 .mcs-tiger.badge {
 	background-color: var(--tiger);
 }
-
+.mcs-clear.badge {
+	background-color: transparent;
+	color: inherit;
+}
 /*═════ booty ═══════════════════════════════════════════════════════════════80════5═══*/
 
 
@@ -571,6 +574,7 @@ header.index {
 div.cite_textbook {
 	background-color: rgba(var(--royalpurple),0.15);
   font-family: "Cormorant Garamond", serif;
+	border-radius: 4px;
 }
 span.cite_textbook {
 	padding: 0;
@@ -1066,9 +1070,23 @@ div.transcode pre * {
 .mcs-mb-1em {
 	margin-bottom: 1em;
 }
-.mcs-mb-2em {
+.mcs-mt-2em,
+.mcs-mt-em200 {
+	margin-top: 2em;
+}
+.mcs-mr-2em,
+.mcs-mr-em200 {
+	margin-right: 2em;
+}
+.mcs-mb-2em,
+.mcs-mb-em200 {
 	margin-bottom: 2em;
 }
+.mcs-ml-2em,
+.mcs-ml-em200 {
+	margin-left: 2em;
+}
+
 .mcs-mb-0 {
 	margin-bottom: 0;
 }
