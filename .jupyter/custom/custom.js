@@ -34,7 +34,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
 		  bold: ["Macro","{\\bf #1}", 1],
 			degC: ["Macro", "\\unicode{x2103}"],
 			degF: ["Macro", "\\unicode{x2109}"],
-			checkmate: ["Macro", "\\color{#5cb85b}\\unicode{x2713}"],
+			checkmate:  ["Macro", "\\color{#5cb85b}\\unicode{x2713}"],
 			LatoText:   ["Macro", "\\style{font-family: LatoWeb;}{\\text{#1}}", 1],
 			LatoTextit: ["Macro", "\\style{font-family: LatoWeb; font-style: italic;}{\\textit{#1}}", 1],
 			LatoMath:   ["Macro", "\\style{font-family: LatoWeb;}{\\mathsf{#1}}", 1],

@@ -25,17 +25,8 @@
 	--body-text-color-bluish: 22, 52, 74;
 	--body-text-color-blueblack: 17, 39, 56;
 	--body-text-color-blueblackblack: 6, 13, 19;
-  /*--body-text-color: #444444;*/
-  /*--body-text-color: red;*/
-  /* --problem-row-badge-txt-color: red;		silver .  */
-  /*--problem-row-badge-bg-color:  #000f89;		/* Tahiti Blue .  *!/*/
-  /*--problem-head-txt-color:        var(--problem-row-badge-txt-color);*/
-  /*--problem-head-bg-color:         var(--problem-row-badge-bg-color);*/
-  /*--problem-head-badge-txt-color:  var(--problem-row-badge-bg-color);*/
-  /*--problem-head-badge-bg-color:   var(--problem-row-badge-txt-color);*/
-  /*--problem-row-answer-txt-color:  var(--problem-row-badge-bg-color);*/
-  /*--problem-row-txt-color:         var(--problem-row-badge-bg-color);*/
-  /*--output—prompt-txt-color: 255,   0,  38;*/
+
+
   --input—prompt-txt-color:  0,   0, 196;        
   --code-cell-bkg-color:  #f7f7ff;
   --code-cell-bkg-color:  250, 247, 245;
@@ -51,14 +42,12 @@
 	--dash: green;
 	--cell: 200px;
 	
-	
 /* ___.mcs __________________________________    */
 	--primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
   --info-hover: #117a8b;
-  /*--warning: #ffc107;*/
   --warning: #f0ae4e;
 	--warning-hover: #d39e00;
   --danger: #dc3545;
@@ -92,7 +81,7 @@ rendered_html .MathJax_Display #intertext {
 	color: blue;
 }
 
-/*═════ bs mods ══════════════════════════════════════════════════════════════80════5═══*/
+/*═════ bs3 mods ═════════════════════════════════════════════════════════════80════5═══*/
 
 
 .hbox.space-between,
@@ -131,14 +120,21 @@ rendered_html .MathJax_Display #intertext {
   background-color: #f5f5f5;
 }
 
-/*═════ jupyter costumations ═════════════════════════════════════════════════80════5═══*/
+
+/*═════ classic jupyter costumations ═════════════════════════════════════════80════5═══*/
 .rendered_html {
-  color: #000;
+  color: #000;   /*   original    */  
   color: rgba(38, 42, 47, 1.00);
   /* any extras will just be numbers: */
 }
 
-/*___ widen rendered md output cells _______ */
+span.cm-comment {
+	font-family: "Victor Mono", monospace;
+	/*font-style: italic;*/
+	font-variant-ligatures: none;
+}
+
+/*═════ widen rendered md output cells to span the page ══════════════════════80════5═══*/
 div.prompt {       
   min-width: 15ex;   /*   original     */ 
 }
@@ -155,15 +151,10 @@ div.input_prompt {
   border-top: 1px solid transparent;
 }
 
-.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);    /*   original     */ 
-  /*background: initial;   */
-}
-
+/* ___make code blocks adapt to background colors. dump alwars white _________   */
 .rendered_html pre {
 	background-color: fff;     /*   original     */ 
 	background-color: rgba(255, 255, 255, 0.8);
-	/*background-color: black;*/
 	padding: 0.5em;
 	border-radius: 5px;
 }
@@ -205,6 +196,11 @@ mcs-brad-5px,
 	/*background: white;*/
 }
 
+/*  tables  */
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);    /*   original     */ 
+}
+
 .mcs-table.fullwidth {
 	/*width: 100%;*/
 	table-layout: auto;
@@ -216,7 +212,6 @@ mcs-brad-5px,
 	width: 1%;
 	white-space:nowrap;
 }
-
 
 [class*="mcs"].table-hover > tbody > tr:hover {
   background-color: #f5f5f5;     /*   original     */ 
@@ -391,9 +386,6 @@ div#notebook-container.container {
   color: var(--coolassbrightblue);
 }
 
-/*div#notebook-container.container::before {
-	content: "ttttt";
-}*/
 
 body {
 	/*counter-reset: toc_section;*/
@@ -471,15 +463,6 @@ body {
 
 
 
-
-
-
-span.cm-comment {
-	font-family: "Victor Mono", monospace;
-	/*font-style: italic;*/
-	font-variant-ligatures: none;
-}
-
 #Attack {
 	color: #1b0b3a;
 	font-family: LatoWebBlack;
@@ -492,19 +475,19 @@ h1.heavy {
 	font-size: 3em;
 }
 	
-h6#crazyindent {
+/*h6#crazyindent {
 	display: none;
 }
 h6#crazyindent + h2,
 h6#crazyindent + h3 {
 	margin-left: -0.6em;
 	position: absolute;
-	/*color: #0a0130;*/
+	/*color: #0a0130;*!/
 }
 h6#crazyindent + h2 + h2,
 h6#crazyindent + h3 + h3 {
 	visibility: hidden;
-}
+}*/
 
 
 
@@ -588,24 +571,25 @@ span.cite_textbook::before {
 }
 
 
-
-
+/*
+Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019). Thermodynamics: An engineering approach (Ninth edition). McGraw-Hill Education.
+*/
 .cite_textbook.cb9 span::before {
   content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A., & Kanoglu, M. (2019)";
-	McGraw-Hill Education.";
 }
 .cite_textbook.cb9 span::after {
 	content: "Thermodynamics: An engineering approach, 9e. ";
 	font-style: italic;
 }
 .cite_textbook.cb9::after {
-	content: "\00a0 McGraw-Hill Education.";
+	content: "\00a0 McGraw-Hill Education, New York.";
 	/*font-style: normal;*/
 }
 
 
-
-
+/*
+Çengel, Y. A., & Boles, M. A. (2015). Thermodynamics: An engineering approach (Eighth edition). McGraw-Hill Education.
+*/
 .cite_textbook.cb8 span::before {
   content: "\00a0 ⋮ Çengel, Y. A., Boles, M. A. (2015) ";
 }
@@ -614,13 +598,16 @@ span.cite_textbook::before {
 	font-style: italic;
 }
 .cite_textbook.cb8::after {
-	content: "\00a0 McGraw-Hill Education.";
+	content: "\00a0 McGraw-Hill Education, New York.";
 	/*font-style: normal;*/
 }
 
 
 
 
+/*
+Çengel, Y. A., & Boles, M. A. (2011). Thermodynamics: An engineering approach (Seventh edition). McGraw-Hill.
+*/
 .cite_textbook.cb7 span::before {
   content: "⋮ Çengel, Y. A., Boles, M. A. (2011) ";
 }
@@ -633,9 +620,9 @@ span.cite_textbook::before {
 	/*font-style: normal;*/
 }
 
-
-
-
+/*
+Moran, M. J., Shapiro, H. N., Boettner, D. D., & Bailey, M. B. (2018). Fundamentals of engineering thermodynamics. (9ed ed.). John Wiley & Sons, Inc.
+*/
 .cite_textbook.ms9 span::before {
   content: "⋮ Moran, et al (2018) ";
 }
@@ -644,7 +631,7 @@ span.cite_textbook::before {
 	font-style: italic;
 }
 .cite_textbook.ms9::after {
-	content: "\00a0 978-1-119-39138-8, John Wiley & Sons, Inc.";
+	content: "\00a0 978-1-119-39138-8, John Wiley & Sons, Inc, Hoboken, NJ.";
 	/*font-style: normal;*/
 }
 
@@ -779,22 +766,16 @@ div.tricks div.tricks {
 }
 
 
-div.tricks span.tricks,
+/*div.tricks span.tricks,
 div.tricks div.tricks {
 	border-color: #383838;
 	color: #383838;
 	font-weight: 100;
+}*/
+
+.tricks.tiger {
+	border-color: var(--tiger);
 }
-
-/*h6 {
-	background: black;
-	color: white;
-	padding: 0.2em;
-}*/
-
-/*div.text_cell_render {
-	background-color: red;
-}*/
 
 
 /*═════ footer ══════════════════════════════════════════════════════════════80════5═══*/
@@ -842,8 +823,6 @@ figcaption::before {
 
 /*═════ misc ════════════════════════════════════════════════════════════════80════5═══*/
 
-/*crystal clear backgrounds*/
-
 div.transcode pre * { 
 	background-color: transparent;
 }
@@ -854,9 +833,8 @@ div.transcode pre * {
 }
 
 
-/* === callouts like those in bootstrap documentation*/
-
-/* from Chris Pratt: https://cpratt.co/twitter-bootstrap-callout-css-styles/ */
+/*═════ callouts like bootstrap docs ════════════════════════════════════════80════5═══
+             from Chris Pratt: https://cpratt.co/twitter-bootstrap-callout-css-styles/ */
 
 .mcs-bs-callout {
     padding: 5px 20px 20px 20px;
@@ -974,9 +952,6 @@ div.transcode pre * {
   background: rgba(var(--subtlegold), 1.00);
 }
 
-/*.mcs-bs-callout-tiger h4 {
-    color: var(--tiger);
-}*/
 .mcs-bs-callout-tiger.mcs-border {
     border-color: var(--tiger);
 }
@@ -986,9 +961,10 @@ div.transcode pre * {
 .mcs-bs-callout-tiger h4, 
 .mcs-bs-callout-tiger h5, 
 .mcs-bs-callout-tiger h6 {
-	/*font-family: LatoWebHeavy;*/
 	color: var(--tiger);
-	/*font-size: 1.25em;*/
+}
+.mcs-bs-callout-tiger.mcs-list li {
+	color: var(--tiger);
 }
 
 .mcs-bs-callout.center > *,
@@ -1050,20 +1026,6 @@ div.transcode pre * {
 		color: #117a8b;
 }
 
-
-/*.mcs-bs-callout.matchtext*/
-
-
-/*
---mcs-fg-color-primary: #007bff;
---mcs-fg-color-hover-primary: #0062cc;
---mcs-fg-color-info: #17a2b8;
---mcs-fg-color-hover-info: #117a8b;
---mcs-fg-color-warning: #ffc107;
---mcs-fg-color-hover-warning: #d39e00;
---mcs-fg-color-danger: #dc3545;
---mcs-fg-color-hover-danger: #c82333;
-*/
 
 
 /*═════ spacing ═════════════════════════════════════════════════════════════80════5═══*/
