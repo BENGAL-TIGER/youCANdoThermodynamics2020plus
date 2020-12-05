@@ -1,8 +1,15 @@
+#!/bin/bash
 
-#
+
+# jupyter css, js customizations
 cp -avr .jupyter ${HOME}
 
-
+# install fresh CoolProp 6.3
+julia -e '
+  import Pkg;
+  Pkg.add(url="https://github.com/BENGAL-TIGER/CoolProp-6.3.0.jl.git");
+  Pkg.precompile();
+  '
 
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
