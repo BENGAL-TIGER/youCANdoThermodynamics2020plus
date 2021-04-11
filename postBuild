@@ -14,3 +14,4 @@ julia -e '
 # enable jupyter extensions
 jupyter nbextension enable livemdpreview/livemdpreview              
 jupyter nbextension enable equation-numbering/main
+jupyter nbextension enable toc2/main

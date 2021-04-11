@@ -76,7 +76,62 @@
 
 }
 
-/*booty*/
+
+/*═════ counters ═════════════════════════════════════════════════════════════80════5═══*/
+body {
+	counter-reset: mcs-toc_section 0 footnotes 0 fn_ref 0 figure_num 0 tabs 0; 
+}
+
+
+
+/* footnotes */
+sup[id^=ftn] {
+	color:var(--mcs_that_bomb_ass_red);
+	font-weight:900;
+}
+sup[id^=ftn]::before {
+	counter-increment: footnotes;
+	content: counter(footnotes);
+}
+
+
+/*═════ manual syntax highlighting ═══════════════════════════════════════════80════5═══*/
+pre.mcs-syntax-highlight.dark {
+	padding: 0 0.5em 1.65em 1em;
+	border-radius: 5px;
+	background-color: var(--mcs_gray_900);
+}
+pre.mcs-syntax-highlight code {
+	background: transparent;
+	font-size: 80%;
+	/* font-weight: 200; */
+}
+
+/*═════ manual syntax highlighting ═══════════════════════════════════════════80════5═══*/
+/*═════ julia dark ═══════════*/
+.dark .julia #opt,
+.dark .julia #fn,
+.dark .julia #ppm {
+	color: #6970f6;
+}
+.dark .julia #fn,
+.dark .julia #jpm,
+.dark .julia #pkg {
+	color: #8CF77B;
+}
+.dark .julia #qt {
+	color: #ff2600;
+}
+.dark .julia {
+	color: #ced4da;
+}
+#jpm,
+#ppm {
+	font-weight: 900;
+}
+
+
+/*═════ booty ════════════════════════════════════════════════════════════════80════5═══*/
 rendered_html .MathJax_Display #intertext {
 	color: blue;
 }
@@ -152,15 +207,15 @@ div.input_prompt {
 }
 
 /* ___make code blocks adapt to background colors. dump alwars white _________   */
-.rendered_html pre {
-	background-color: fff;     /*   original     */ 
+/* .rendered_html pre {
+	background-color: fff;       original     
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 0.5em;
 	border-radius: 5px;
 }
 .rendered_html pre code {
   background-color: transparent;
-}
+} */
 
 /*═════ lists ════════════════════════════════════════════════════════════════80════5═══*/
 /*.mcs-numbered */
@@ -362,10 +417,6 @@ mcs-brad-5px,
 
 
 
-/*═════ counters ════════════════════════════════════════════════════════════80════5═══*/
-body {
-	counter-reset: toc_section 0 counter_cite 0 counter_ref 0;
-}
 
 /*════════════════════════════════════════════════════════════════════════ counters ═══*/
 
@@ -385,7 +436,7 @@ div#notebook-container.container {
 
 
 body {
-	/*counter-reset: toc_section;*/
+	/*counter-reset: mcs-toc_section;*/
 	font-family: "LatoWeb";
 	font-variant-numeric: oldstyle-nums; 
 	-ms-text-size-adjust: 100%;
@@ -635,34 +686,36 @@ Moran, M. J., Shapiro, H. N., Boettner, D. D., & Bailey, M. B. (2018). Fundament
 
 
 /*═════ toc ═════════════════════════════════════════════════════════════════80════5═══*/
-section.toc.zero {
-	counter-reset: toc_section -1;
+section.mcs-toc.zero {
+	counter-reset: mcs-toc_section -1;
+	white-space: normal;
 }
 
-section.toc {
-	counter-increment: toc_section;
+section.mcs-toc {
+	counter-increment: mcs-toc_section;
 	counter-reset: list_items;
+	white-space: normal;
 }
 
-section.toc h2 {
+section.mcs-toc h2 {
 	/*margin-left: -1em;*/
 	/*float: left;*/
 	color: #454545!important;	
 }
 
-section.toc h2::before {
-	content: counter(toc_section, upper-greek)".\00a0";
+section.mcs-toc h2::before {
+	content: counter(mcs-toc_section, upper-greek)".\00a0";
 }
 
 
-.toc a {
+.mcs-toc a {
 	text-decoration: none!important;
 	color: rgb(var(--body-text-color));
 }
 
 
 
-.toc li:hover {
+.mcs-toc li:hover {
 	border-left: 0.5px solid #461dff;
 	padding-left: 1em;
 	margin-left: calc( -1em - 5px);
@@ -670,36 +723,36 @@ section.toc h2::before {
   border-radius: 6px;
 }
 
-.toc ol li::before {
+.mcs-toc ol li::before {
 	counter-increment: list_items;
-	content: counter(toc_section, lower-greek)"."counter(list_items) "\00a0\00a0";
+	content: counter(mcs-toc_section, lower-greek)"."counter(list_items) "\00a0\00a0";
 }
 
-/*.toc ol li:first-of-type {
+/*.mcs-toc ol li:first-of-type {
 	margin-top: 3em;
 }*/
 
 
-.toc.mb-050em ol li {
+.mcs-toc.mb-050em ol li {
 	display: flex;
 	margin-bottom: 0.5em;
 }
 
-.toc.mb-100em ol li {
+.mcs-toc.mb-100em ol li {
 	display: flex;
 	margin-bottom: 1em;
 }
 
-.toc.mb-200em ol li {
+.mcs-toc.mb-200em ol li {
 	display: flex;
 	margin-bottom: 2em;
 }
 
-.toc li p {
+.mcs-toc li p {
 	flex: 4 0;
 }
 
-.toc ol li img {
+.mcs-toc ol li img {
 	width: 20%;
 	height: 100%;
 	margin-top: 0;
@@ -708,29 +761,29 @@ section.toc h2::before {
 	/*float: right;*/
 }
 
-.toc ol li a  {
+.mcs-toc ol li a  {
 	display:  inline;
 	/*border: 1px solid red;*/
 	padding-right: 0.5em;
 }
-.toc ol li a div.img {
+.mcs-toc ol li a div.img {
 	/*display:  inline;*/
 	/*border: 1px solid red;*/
 	float: right;
 }
-.toc ol li a div.img img{
+.mcs-toc ol li a div.img img{
 	margin: 0;
 	width: 100%;
 }
 
-.toc ol li a strong em {
+.mcs-toc ol li a strong em {
 	color: rgba(2, 66, 104, 1.00);
 	color: rgba(41, 75, 173, 1.00);
 	font-family: LatoWebHeavy;
 }
 
-.toc a:hover *,
-.toc a:hover {
+.mcs-toc a:hover *,
+.mcs-toc a:hover {
 	text-decoration: underline!important;		
 	color: rgb(var(--coolassbrightblue));
 }
@@ -806,15 +859,30 @@ footer.psy div.psy {
 
 
 /*═════ figures ═════════════════════════════════════════════════════════════80════5═══*/
+.figure,
 figure {
 	counter-increment: figure_num;
 	margin: 2%;
 	font-size: smaller;
+	/* border: 2px solid red; */
 }
-	
-figcaption::before {
+
+.figure .caption::before,
+figure figcaption::before {
 	content: "Figure "counter(figure_num)". ";
 	font-weight: bolder;
+}
+
+.figure .caption,
+figure figcation {
+	text-align: center;
+}
+
+.figure .caption a,
+figure figcation a {
+	font-style: italic;
+	text-decoration: none;
+	color: #ff2600;
 }
 
 
@@ -849,6 +917,7 @@ div.transcode pre * {
 }
 .mcs-bs-callout code {
     border-radius: 3px;
+	/* font-size: 80%; */
 }
 .mcs-bs-callout+.mcs-bs-callout {
     margin-top: -5px;
@@ -1261,3 +1330,19 @@ cite[id^="msc-c:"]::before {
 	visibility: visible;
 	opacity: 1;
 }
+
+/*footnote backlink */
+.mcs-references a {
+	text-decoration: none!important;
+	/*color: red;*/
+}
+
+
+/*.rendered_html a {
+	color: var(--mcs_that_bomb_ass_red);
+	text-decoration-color: var(--mcs_that_bomb_ass_red);
+}*/
+
+/*.rendered_html {
+	white-space: normal;
+}*/
